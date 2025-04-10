@@ -39,6 +39,17 @@ function calcuteEvenNo(num) {
 
 //Qus3 Calcutethhre smallest no
 
+const numbers = [25, 10, 5, 40, 1, 90, 3];
+
+// Step 1: Sort the array in ascending order
+const sorted = numbers.sort((a, b) => a - b);
+
+// Step 2: Get the first 3 elements
+const smallestThree = sorted.slice(0, 3);
+
+console.log("Three smallest numbers are:", smallestThree);
+
+
  
 
 
