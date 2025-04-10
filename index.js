@@ -38,16 +38,15 @@
 
 
 //Qus3 Calcutethhre smallest no
-let a = 15, b = 9, c = 20; 
-    let smallest ;
-    if(a<=b && a<=c){
-        smallest =a;
-    } else if (b<=a && b<c){
-        smallest = b;
-    }
-   else{
-    smallest = c;
-   }
 
- console.log(smallest )
+let x = 6;  
+console.log(++x);
+console.log(x++);  
+
+
+
+
+
+
  
+
