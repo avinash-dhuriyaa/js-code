@@ -10,6 +10,7 @@ let target = 9;
 let left = 0;
 let right = arr1.length-1;
  console.log(arr1)
+ 
 
 //  let nasu = [2,3,4,6,7]
 //  nasu  [2] = 9
