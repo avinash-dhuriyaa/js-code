@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel-Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;  
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #1e1e1e, #000);
+      color: #fff;
+    }
+
+    #wrapper {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .main-title {
+      text-align: center;
+      font-size: 3rem;
+      color: #ff4141;
+      text-shadow: 0 0 15px #ff0000;
+      animation: glow 1.5s ease-in-out infinite alternate;
+      margin-bottom: 50px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff0000; }
+      to { text-shadow: 0 0 20px #ff5e5e; }
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      width: 32%;
+      position: relative;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+      transform: scale(0.95);
+      opacity: 0;
+      animation: zoomFadeIn 0.6s ease forwards;
+    }
+
+    .card:nth-child(odd) {
+      animation-delay: 0.2s;
+    }
+
+    .card:nth-child(even) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes zoomFadeIn {
+      0% {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%);
+      object-fit: cover;
+      box-shadow: 0 0 20px #333;
+    }
+
+    .card:hover img {
+      filter: grayscale(0%);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      transition: 0.5s;
+      filter: drop-shadow(0 0 10px red);
+    }
+
+    .card figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      width: 100%;
+      font-size: 14px;
+      font-family: 'Roboto Mono', monospace;
+      color: #fff;
+      transform: translateY(100%);
+      opacity: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .card:hover figcaption {
+      transform: translateY(0%);
+      opacity: 1;
+      text-shadow: 0 0 5px #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="container">
+      <h1 class="main-title">🦸‍♂️ Marvel Heroes Gallery 🦸‍♀️</h1>
+      <div class="gallery">
+        <figure class="card">
+          <img src="avi/image1.jpg" alt="">
+          <figcaption>
+            <strong>Spider-Man</strong><br>
+            Bitten by a radioactive spider, Peter Parker transforms into Spider-Man. With great power comes great responsibility – swinging across NYC, saving the day with agility, spider-sense, and that signature wit!
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image2.jpg" alt="">
+          <figcaption>
+            <strong>Scarlet Witch (Wanda)</strong><br>
+            Wanda Maximoff, aka Scarlet Witch, wields chaos magic and can alter reality itself. A complex hero, powerful Avenger, and mother to twin sons, she's one of the most feared and tragic figures in the Marvel universe.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image3.jpg" alt="">
+          <figcaption>
+            <strong>Hulk</strong><br>
+            Scientist Bruce Banner's life changed with a gamma explosion. Now, when angered, he becomes the mighty Hulk – a green rage monster with limitless strength and an unbreakable will!
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image4.jpg" alt="">
+          <figcaption>
+            <strong>Iron Man</strong><br>
+            Genius billionaire Tony Stark built a suit of armor to escape captivity. Iron Man became a symbol of heroism and technology – leading the Avengers and defending Earth with style.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image5.jpg" alt="">
+          <figcaption>
+            <strong>Captain America</strong><br>
+            Steve Rogers, enhanced with the Super-Soldier Serum during WWII, fights for justice with an unbreakable shield and unwavering courage. The moral heart of the Avengers.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image6.jpg" alt="">
+          <figcaption>
+            <strong>Thor</strong><br>
+            The Norse God of Thunder, son of Odin, wielder of Mjolnir – Thor defends the realms with his divine powers, epic lightning, and legendary strength.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image7.jpg" alt="">
+          <figcaption>
+            <strong>Black Panther</strong><br>
+            T'Challa, King of Wakanda, protects his people with enhanced abilities and high-tech suits. A wise ruler, fierce warrior, and true Avenger.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image8.jpg" alt="">
+          <figcaption>
+            <strong>Doctor Strange</strong><br>
+            Once a brilliant surgeon, Stephen Strange now guards the mystical realms as the Sorcerer Supreme – master of magic, time, and reality.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image9.jpg" alt="">
+          <figcaption>
+            <strong>Hawkeye</strong><br>
+            Clint Barton, the sharpest archer alive, brings precision, bravery, and heart to the Avengers. No powers, just pure skill.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image10.jpg" alt="">
+          <figcaption>
+            <strong>Thanos</strong><br>
+            The Mad Titan seeks balance through destruction. Wielder of the Infinity Gauntlet, he is one of the greatest threats the universe has ever faced.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image11.jpg" alt="">
+          <figcaption>
+            <strong>Black Widow</strong><br>
+            Natasha Romanoff, a deadly spy and skilled fighter, turned against her dark past to become a key member of the Avengers.
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="avi/image12.jpg" alt="">
+          <figcaption>
+            <strong>Vision</strong><br>
+            A synthezoid created by Ultron, Vision possesses intelligence, emotion, and the Mind Stone – making him a powerful and compassionate hero.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
